@@ -28,6 +28,7 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 - Web Development
   - Backend: Golang, C#, Python, Rust
   - Frontend: Angular, HTML, CSS, JavaScript, TypeScript
+- Web3 with Ethereum
 
 # My experience
 
@@ -56,7 +57,7 @@ CI/CD pipelines with GitHub Actions
 `NextJS`, `Typescript`
 
 - [Intelligent Oracle](https://www.intelligentoracle.com/)([repo](https://github.com/yeagerai/intelligent-oracle))
-- [dKOL](https://github.com/yeagerai/dKOL)
+- [dKOL](https://dkol.genlayer.com/)
 
 ## Freelance
 

@@ -36,14 +36,12 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 > 2024 - Present
 
-### @DevOps
+### dApps builder
 
-Automatic deployment of infrastructure using
+`NextJS`, `Typescript`
 
-- `Ansible` + `GCP VMs` + `CloudFlare` + `docker compose`
-- `Terraform`, `Google Cloud Run`
-
-CI/CD pipelines with GitHub Actions
+- [Intelligent Oracle](https://www.intelligentoracle.com/)([repo](https://github.com/yeagerai/intelligent-oracle))
+- [dKOL](https://dkol.genlayer.com/)
 
 ### @Developer Experience
 
@@ -52,12 +50,14 @@ CI/CD pipelines with GitHub Actions
 - [GenLayer Studio](https://github.com/yeagerai/genlayer-studio)
 - [genlayer-js](https://github.com/yeagerai/genlayer-js)
 
-### dApps builder
+### @DevOps
 
-`NextJS`, `Typescript`
+Automatic deployment of infrastructure using
 
-- [Intelligent Oracle](https://www.intelligentoracle.com/)([repo](https://github.com/yeagerai/intelligent-oracle))
-- [dKOL](https://dkol.genlayer.com/)
+- `Ansible` + `GCP VMs` + `CloudFlare` + `docker compose`
+- `Terraform`, `Google Cloud Run`
+
+CI/CD pipelines with GitHub Actions
 
 ## Freelance
 

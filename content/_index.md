@@ -36,6 +36,12 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 > 2024 - Present
 
+### GenLayer Node Developer
+
+Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a decentralized executor for the GenVM, responsible of processing GenLayer transactions.
+
+`Go`, `Solidity`, `Python`, `TypeScript`
+
 ### dApps builder
 
 `NextJS`, `Typescript`

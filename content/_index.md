@@ -32,7 +32,7 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 # My experience
 
-## Engineer at [YeagerAI](https://yeager.ai/) building [GenLayer](https://www.genlayer.com/)
+## Engineer at [GenLayer Labs](https://www.genlayerlabs.com/) building [GenLayer](https://www.genlayer.com/)
 
 > 2024 - Present
 
@@ -46,15 +46,15 @@ Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a 
 
 `NextJS`, `Typescript`
 
-- [Intelligent Oracle](https://www.intelligentoracle.com/)([repo](https://github.com/yeagerai/intelligent-oracle))
+- [Intelligent Oracle](https://www.intelligentoracle.com/)([repo](https://github.com/genlayerlabs/intelligent-oracle))
 - [Rally](https://www.rally.fun/)
 
 ### @Developer Experience
 
 `Python`, `VueJS`, `TypeScript`, `Solidity`
 
-- [GenLayer Studio](https://github.com/yeagerai/genlayer-studio)
-- [genlayer-js](https://github.com/yeagerai/genlayer-js)
+- [GenLayer Studio](https://github.com/genlayerlabs/genlayer-studio)
+- [genlayer-js](https://github.com/genlayerlabs/genlayer-js)
 
 ### @DevOps
 

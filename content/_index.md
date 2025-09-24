@@ -47,7 +47,7 @@ Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a 
 `NextJS`, `Typescript`
 
 - [Intelligent Oracle](https://www.intelligentoracle.com/)([repo](https://github.com/yeagerai/intelligent-oracle))
-- [dKOL](https://dkol.genlayer.com/)
+- [Rally](https://www.rally.fun/)
 
 ### @Developer Experience
 

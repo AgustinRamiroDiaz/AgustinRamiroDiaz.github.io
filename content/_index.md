@@ -3,7 +3,7 @@
 
 # Who am I?
 
-I am a software engineer with a passion for building things. I consider myself a fast learner and a team player. I am always looking for new challenges and opportunities to grow.
+I am a software engineer based in Rosario, Argentina, with a passion for building things. I consider myself a fast learner and a team player. I am always looking for new challenges and opportunities to grow.
 
 In my free time I like to do Acroyoga and Acroduo.
 
@@ -13,7 +13,7 @@ In my free time I like to do Acroyoga and Acroduo.
 
 I believe that the best way to learn is by doing, and the best way to teach is by example. I have a strong belief in the power of collaboration and the importance of having a clear and open communication channel. I am always open to feedback and I believe that it is the best way to grow as a person and as a professional.
 
-I thrive for a healthy work-life balance and I try to maintain a positive attitude towards my work and my team. I am always looking for ways to improve myself and my skills, and for new challenges and opportunities to grow.
+I strive for a healthy work-life balance and I try to maintain a positive attitude towards my work and my team. I am always looking for ways to improve myself and my skills, and for new challenges and opportunities to grow.
 
 I've become a fan of asynchronous culture due to the flexibility and productivity it provides. I think it improves knowledge sharing, transparency and inclusivity.
 
@@ -38,7 +38,7 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 ### GenLayer Node Developer
 
-Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a decentralized executor for the [GenVM](https://github.com/genlayerlabs/genvm), responsible of processing GenLayer transactions.
+Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a decentralized executor for the [GenVM](https://github.com/genlayerlabs/genvm), responsible for processing GenLayer transactions.
 
 `Go`, `Solidity`, `Python`, `TypeScript`
 
@@ -88,7 +88,7 @@ Due to high demand, I moved to the infrastructure team to help with the developm
 - `Google Cloud Platform` as our cloud provider
   - I was in charge of the Monitoring and Alerting project, where we used `AlertManager`, `Prometheus` and `Grafana`.
 
-In this time I've learned a lot about the infrastructure side of `Kubernetes` and explored some popular helm charts like `NGINX`. I've also became very comfortable working with `Google Cloud Platform` services and got to explore a bit of `AWS` and `Azure`.
+In this time I've learned a lot about the infrastructure side of `Kubernetes` and explored some popular helm charts like `NGINX`. I've also become very comfortable working with `Google Cloud Platform` services and got to explore a bit of `AWS` and `Azure`.
 
 ### Backend Software Developer at [Okteto](https://www.okteto.com/)
 
@@ -103,13 +103,13 @@ In this time, I've learned a lot about Kubernetes in depth, by managing and crea
 
 I've gotten to know better the container ecosystem by using `Docker` and `containerd` while working with `Buildkit` and `Kubernetes`.
 
-I've also improved my craft as a developer with `golang`, learning about its design patterns and the its "idiomatic" code. I've got to work with some famous packages such as `client-go`, `cobra` and `require`.
+I've also improved my craft as a developer with `golang`, learning about its design patterns and its "idiomatic" code. I've got to work with some famous packages such as `client-go`, `cobra` and `require`.
 
 ## Data Science member at [Héritas](https://heritas.com.ar/)
 
 > 2021-2022
 
-I had the opportunity to work with a small and amazing team of data scientists, computer scientists and bioinformatics in a genetics based presicion medicine company.
+I had the opportunity to work with a small and amazing team of data scientists, computer scientists and bioinformatics in a genetics based precision medicine company.
 
 I got to work in many areas and with many tooling:
 
@@ -145,7 +145,7 @@ I was able to keep up with a team of Senior Developers with over 10 years of exp
   - Visual Studio
 - Frontend Development:
   - `Angular` with `HTML` and `CSS`
-  - `typeScript` + `javaScript`
+  - `TypeScript` + `JavaScript`
   - Visual Studio Code
 - Agile methodologies
 - Unit and Integration Testing
@@ -176,7 +176,9 @@ I was a teacher at [Taller Big Bang](https://www.facebook.com/bigbangtaller/), w
 
 ---
 
-# Open Source
+# Self Learner
+
+I have a passion for learning and I'm constantly studying and trying out new stuff. I don't have the time to journal all of them, so be sure to check out my [GitHub](https://github.com/AgustinRamiroDiaz) if you are interested in seeing what I've been working on lately.
 
 ## [Carpoolear](https://carpoolear.com.ar/) by [STS Rosario](https://sumatustrayecto.org/)
 
@@ -184,12 +186,6 @@ Contributed to Carpoolear, an open source carpooling platform that connects driv
 
 - [Frontend](https://github.com/STS-Rosario/carpoolear) - `VueJS`
 - [Backend](https://github.com/STS-Rosario/carpoolear_backend) - `PHP`, `Laravel`
-
----
-
-# Self Learner
-
-I have a passion for learning and I'm constantly studying and trying out new stuff. I don't have the time to journal all of them, so be sure to check out my [GitHub](https://github.com/AgustinRamiroDiaz) if you are interested in seeing what I've been working on lately.
 
 ## Snake with local multiplayer
 

@@ -38,7 +38,7 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 ### GenLayer Node Developer
 
-Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a decentralized executor for the GenVM, responsible of processing GenLayer transactions.
+Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a decentralized executor for the [GenVM](https://github.com/genlayerlabs/genvm), responsible of processing GenLayer transactions.
 
 `Go`, `Solidity`, `Python`, `TypeScript`
 
@@ -173,6 +173,17 @@ I was a teacher at [Taller Big Bang](https://www.facebook.com/bigbangtaller/), w
 
 - English (Fluent)
 - Spanish (Native)
+
+---
+
+# Open Source
+
+## [Carpoolear](https://carpoolear.com.ar/) by [STS Rosario](https://sumatustrayecto.org/)
+
+Contributed to Carpoolear, an open source carpooling platform that connects drivers and passengers to share rides.
+
+- [Frontend](https://github.com/STS-Rosario/carpoolear) - `VueJS`
+- [Backend](https://github.com/STS-Rosario/carpoolear_backend) - `PHP`, `Laravel`
 
 ---
 

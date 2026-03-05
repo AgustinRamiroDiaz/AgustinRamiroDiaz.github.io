@@ -38,7 +38,7 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 ### GenLayer Node Developer
 
-Building the [GenLayer Node](https://github.com/genlayerlabs/genlayer-node/), a decentralized executor for the [GenVM](https://github.com/genlayerlabs/genvm), responsible for processing GenLayer transactions.
+Building the [GenLayer Node](https://docs.genlayer.com/validators/setup-guide) ([repo](https://github.com/genlayerlabs/genlayer-node/)), a decentralized executor for the [GenVM](https://github.com/genlayerlabs/genvm), responsible for processing GenLayer transactions.
 
 `Go`, `Solidity`, `Python`, `TypeScript`
 

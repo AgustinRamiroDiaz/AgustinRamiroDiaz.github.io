@@ -21,6 +21,8 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 # Main areas of Knowledge
 
+- AI: both usage of AI agents (Claude Code, Cursor, etc.) and knowledge of its inner workings (neural networks, LLMs)
+- Web3 with Ethereum
 - Managing Kubernetes and integrating with its APIs
 - Infrastructure as Code with Terraform
 - Cloud Providers: Google Cloud Platform, AWS
@@ -28,7 +30,6 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 - Web Development
   - Backend: Golang, C#, Python, Rust
   - Frontend: Angular, HTML, CSS, JavaScript, TypeScript
-- Web3 with Ethereum
 
 # My experience
 

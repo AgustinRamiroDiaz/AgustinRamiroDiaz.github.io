@@ -53,10 +53,9 @@ on approvals from CISB.
   Docker and the new cloud architecture, and I submitted PRs to the codebase to
   model best practices and teach through code review.
 - **Working with third parties:** The people in charge of the cloud
-  infrastructure at SZICOM were called CISB. They were not knowledgeable in
-  containerization, so I was the one able to make the changes. I had some back
+  infrastructure at SZICOM were called CISB. Their team had limited containerization context, so I was the one able to make the changes. I had some back
   and forth trying to delegate tasks to them, such as VPC configuration, but
-  after many attempts I noticed that they were slow and often unresponsive.
+  after many attempts I noticed that their response times were slowing delivery.
   That's where I applied the rule: "If it's not working, change something." I
   discussed this with SZICOM so I could handle all the cloud-side work myself,
   which led to faster implementation by not relying on third parties.
@@ -76,6 +75,22 @@ on approvals from CISB.
 - The worker service handled message bursts reliably with the right-sized
   instance.
 - The developer team was equipped to maintain and extend the new infrastructure.
+
+### Reflection
+
+The biggest lesson from this project was to validate scale and usage patterns
+before choosing infrastructure patterns. I initially approached the RabbitMQ
+worker with a Kubernetes-style mindset: smaller instances, horizontal scaling,
+and reactive autoscaling. After measuring the real workload, I realized the
+customer did not need a complex autoscaling setup. They needed a simple,
+reliable service that could absorb predictable bursts at a low fixed cost.
+
+I also learned that ownership sometimes means changing the collaboration model.
+My first instinct was to delegate cloud tasks to the existing infrastructure
+provider, but when that path slowed delivery, I made the constraint explicit,
+aligned with the customer, and took direct ownership of the cloud work. In a
+future project, I would identify those delivery risks earlier and agree on
+clear ownership boundaries from the beginning.
 
 ### Impact on Webflow Core Behaviors
 
@@ -159,6 +174,22 @@ due to concurrent pre-fetching. Adding new event consumers became a trivial
 operation. The modular design meant that the indexing lag fix was a contained,
 surgical change in one component rather than a rewrite.
 
+### Reflection
+
+This project reinforced the importance of designing systems around failure
+modes, not just happy paths. The first version of the pipeline was modular and
+functional, but real production behavior exposed issues that were outside our
+direct control: websocket instability and delayed indexing from an external API
+provider. The strongest design choice was not assuming those dependencies would
+behave perfectly.
+
+It also taught me the value of observability and narrow interfaces. Because the
+pipeline was split into block detection, event fetching, and event routing, I
+could isolate the indexing problem and fix it without rewriting the whole
+system. In future systems, I would continue investing early in clear component
+boundaries, metrics, and operational visibility, especially when correctness is
+part of the product promise.
+
 ### Impact on Webflow Core Behaviors
 
 - **Build lasting customer trust:** The GenLayer Node processed financial ledger
@@ -238,6 +269,21 @@ infrastructure-as-code approach made onboarding new customer environments
 repeatable and auditable. The CLI and GraphQL API improvements contributed to a
 platform that served thousands of developers managing their Kubernetes
 development environments.
+
+### Reflection
+
+The main lesson from Okteto was that observability is not just a technical tool;
+it is a collaboration tool. Before the monitoring stack existed, production
+health depended too much on individual knowledge and reactive investigation.
+Afterward, the team had shared dashboards, alerts, and definitions of what
+"healthy" meant, which made incidents easier to discuss and resolve.
+
+I also learned that platform work should reduce cognitive load for users and
+teammates. The CLI, GraphQL API, Helm charts, and Terraform modules all served
+the same broader goal: make complex Kubernetes environments easier to operate
+and use. In future platform work, I would continue measuring success not only by
+whether the system works, but by whether it makes the next engineer or customer
+faster and more confident.
 
 ### Impact on Webflow Core Behaviors
 

@@ -221,89 +221,96 @@ part of the product promise.
 ### Situation
 
 Okteto is a developer platform that provides on-demand Kubernetes-based
-development environments for software teams. The platform served 20+ enterprise
-customer environments, each running on dedicated Kubernetes clusters. The
-infrastructure and observability tooling was immature: there was no centralized
-monitoring or alerting stack, which made it difficult to detect reliability
-issues proactively. The backend services and CLI tooling also needed active
-development to serve a growing developer audience.
+development environments for software teams. I originally joined as a backend
+developer, working mostly on Go services, GraphQL APIs, and developer-facing
+product features.
+
+As the company grew, the Platform team needed more help. Okteto had several
+enterprise customer environments running on dedicated Kubernetes clusters, and
+the team needed more capacity to manage infrastructure, improve deployment
+processes, and keep cloud resources organized. The company had a stronger need
+for platform engineering than for one more backend developer at that specific
+moment.
 
 ### Task
 
-I was responsible for managing Kubernetes clusters across all customer
-environments, developing backend services and a GraphQL API in Go, building the
-CLI tool for Kubernetes interaction, and leading the design and implementation
-of a monitoring and observability stack from the ground up.
+My task was not just to contribute to a different codebase. I actually moved
+teams, from Backend to Platform, and had to become productive in a different
+kind of engineering work. That meant learning the team's infrastructure tooling,
+understanding how customer environments were provisioned and maintained, and
+taking responsibility for work that affected the company's cloud operations and
+resource distribution.
 
 ### Action
 
-On the infrastructure side, I managed multi-tenant Kubernetes clusters across 20+
-environments using Terraform for infrastructure-as-code and Helm charts for
-multi-service deployments on GCP. I wrote Helm charts that could be
-parameterized per customer, enabling consistent deployments with
-environment-specific overrides.
+I treated the move as a learning and execution problem at the same time. I had
+some previous curiosity and experience with cloud infrastructure, but I still had
+to ramp up on the specific tools and processes used by the Platform team.
 
-For observability, I designed and built the full monitoring stack from scratch:
+The main actions I took were:
 
-- **Prometheus:** Metrics collection from all cluster components and services.
-- **Grafana:** Dashboards and visualization.
-- **Alerting rules and notification channels:** Surfaced issues to the team
-  before customers reported them.
-
-This required defining clear specs for what "healthy" looked like for each
-service, instrumenting the services to emit the right metrics, and closing the
-loop with alerts that had actionable runbooks.
-
-On the backend, I developed services in Go that powered the platform's developer
-APIs, contributed to a GraphQL API serving thousands of developers, and built CLI
-tooling that let developers interact with their Kubernetes environments without
-needing deep Kubernetes expertise. I collaborated cross-functionally with product
-managers, designers, and data analysts to ship features end-to-end.
+- **Learned Terraform and Terraform Cloud:** I studied the existing modules,
+  state management, workspace structure, and review workflow so I could make
+  infrastructure changes safely instead of treating Terraform as a black box.
+- **Ramped up on GCP:** I learned the relevant GCP services used by Okteto's
+  platform, how the Kubernetes clusters were configured, and how cloud resources
+  were allocated across environments.
+- **Understood custom deployment pipelines:** I learned the internal pipelines
+  used to provision, update, and operate customer environments, including where
+  automation existed and where manual care was still required.
+- **Connected backend context with platform work:** Because I came from the
+  backend/product side, I could reason not only about infrastructure mechanics,
+  but also about how platform decisions affected developers, customers, and the
+  product experience.
+- **Contributed while learning:** I did not wait to become an expert before
+  helping. I started with smaller, safer tasks, asked questions, reviewed
+  existing patterns, and gradually took on more responsibility as I built trust
+  with the Platform team.
 
 ### Result
 
-The monitoring and observability stack became the team's primary tool for
-detecting and diagnosing production issues. System reliability improved
-measurably: problems were caught proactively rather than reactively. The
-infrastructure-as-code approach made onboarding new customer environments
-repeatable and auditable. The CLI and GraphQL API improvements contributed to a
-platform that served thousands of developers managing their Kubernetes
-development environments.
+The company got a better distribution of engineering resources. Instead of
+having backend capacity where it was less urgently needed and platform capacity
+where the team was under pressure, I was able to move into the area with higher
+organizational need and become useful there.
+
+For the Platform team, this meant more hands on infrastructure work, customer
+environment operations, Terraform changes, GCP work, and deployment pipeline
+maintenance. For the company, it meant better coverage of critical platform
+responsibilities without needing to wait for a new hire or leave the Platform
+team overloaded.
 
 ### Reflection
 
-The main lesson from Okteto was that observability is not just a technical tool;
-it is a collaboration tool. Before the monitoring stack existed, production
-health depended too much on individual knowledge and reactive investigation.
-Afterward, the team had shared dashboards, alerts, and definitions of what
-"healthy" meant, which made incidents easier to discuss and resolve.
+This experience reinforced the value of curiosity and breadth. My previous
+interest in cloud infrastructure made it possible for me to adapt when the
+company needed help outside my original backend role. I was not a platform
+specialist at the start, but I had enough foundation and enough learning
+momentum to become productive.
 
-I also learned that platform work should reduce cognitive load for users and
-teammates. The CLI, GraphQL API, Helm charts, and Terraform modules all served
-the same broader goal: make complex Kubernetes environments easier to operate
-and use. In future platform work, I would continue measuring success not only by
-whether the system works, but by whether it makes the next engineer or customer
-faster and more confident.
+The larger lesson is that versatility can be a real team asset. Sometimes the
+highest-impact thing is not staying inside the role where you are already most
+comfortable, but moving toward the team's actual constraint. I learned that my
+background in backend development, combined with curiosity about cloud and
+infrastructure, allowed me to bridge teams and create useful impact in a new
+area.
 
 ### Impact on Webflow Core Behaviors
 
 - **Build lasting customer trust:** Okteto served enterprise customer
-  environments, so reliability directly affected customer confidence. By
-  building monitoring, dashboards, alerting, and actionable runbooks, I helped
-  the team detect issues before customers had to report them. That changed the
-  reliability posture from reactive support to proactive stewardship.
-- **Win together:** The observability stack gave engineers, product managers,
-  and support stakeholders a shared view of system health. Clear dashboards and
-  alerts made production issues easier to discuss and resolve as a team, while
-  the CLI and GraphQL work helped developers use Kubernetes-based environments
-  without needing to become Kubernetes experts.
-- **Reinvent ourselves:** Before this work, the team lacked a centralized way to
-  understand production health across 20+ customer clusters. I helped move the
-  organization toward infrastructure-as-code, repeatable deployments, and
-  first-class observability. That was a shift from manually understanding each
-  environment to operating the platform through reusable systems.
-- **Deliver with Speed, Clarity, and Craft:** I focused on practical,
-  maintainable foundations: Terraform for auditable infrastructure, Helm for
-  parameterized deployments, Prometheus for metrics, Grafana for visibility, and
-  alerts tied to actionable runbooks. The work improved day-to-day operational
-  speed while keeping the implementation clear enough for the team to extend.
+  environments, so platform reliability directly affected customer confidence.
+  By moving into the team responsible for those environments, I helped increase
+  the company's ability to maintain and improve the systems customers depended
+  on.
+- **Win together:** This story is mostly about team-first behavior. I moved from
+  the team where I was already comfortable to the team where the company had the
+  greater need. That helped balance engineering capacity and reduced pressure on
+  the Platform team.
+- **Reinvent ourselves:** I had to reinvent my own role from backend developer
+  to platform engineer. That meant learning Terraform, Terraform Cloud, GCP,
+  Kubernetes operations, and custom deployment pipelines while still contributing
+  useful work.
+- **Deliver with Speed, Clarity, and Craft:** I ramped up carefully by studying
+  existing patterns, taking smaller safe tasks first, and growing into broader
+  responsibility. That let me move quickly without treating infrastructure as a
+  place for reckless experimentation.

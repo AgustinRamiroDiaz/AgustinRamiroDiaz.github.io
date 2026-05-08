@@ -63,6 +63,13 @@ Result:
 - All services ran on Linux containers in ECS, backed by RDS, with a CI/CD pipeline via CodePipelines.
 - The worker service handled message bursts reliably with the right-sized instance. The developer team was equipped to maintain and extend the new infrastructure.
 
+Impact on Webflow core behaviors:
+
+- Build lasting customer trust: By taking full ownership of the migration, communicating clearly with the owner, and delivering the move without downtime or disruption to the dev team, I helped the customer trust that I was able to offer them end to end solutions
+- Win together: Even though I was the sole owner of the technical migration, I did not treat it as a solo deliverable. I taught the dev team Docker and the new AWS architecture, used PRs to model best practices, and made sure the team could maintain the system after I left. The goal was not just to ship the migration, but to leave the organization stronger.
+- Reinvent ourselves: The work required moving from a VM-based, Windows-only deployment model to a containerized, cloud-native architecture. I also changed my own operating model when the original delegation path with CISB was too slow. Instead of continuing with a process that was not working, I adapted, took direct responsibility for the cloud side, and unblocked the project.
+- Deliver with Speed, Clarity, and Craft: I balanced speed with pragmatic engineering. For example, on the RabbitMQ worker autoscaling problem, I explored CPU-based scaling and AmazonMQ metrics, then chose a slightly larger instance because it was simpler, more reliable, and still inexpensive. That decision showed craft: the best solution was not the most complex one, but the one that delivered the required reliability with clear tradeoffs.
+
 # GENLAYER LABS
 
 Situation:
@@ -117,6 +124,13 @@ concurrent pre-fetching. Adding new event consumers became a trivial operation.
 The modular design meant that the indexing lag fix was a contained, surgical
 change in one component rather than a rewrite.
 
+Impact on Webflow core behaviors:
+
+- Build lasting customer trust: The GenLayer Node processed financial ledger activity, so correctness and reliability were essential to user trust. Dropped events could have meant incorrect internal state or missed business-critical activity. By eliminating dropped events and making the pipeline observable, I strengthened the reliability guarantees that developers and users needed from the platform.
+- Win together: The event router made it easier for other engineers to build on top of the node. Instead of each feature needing to understand the event source directly, teams could add consumers through a clean pub-sub interface. That reduced coordination overhead and gave the team a shared foundation for future work.
+- Reinvent ourselves: I did not stop at the first working implementation. After observing real production behavior, I redesigned parts of the pipeline to handle websocket instability, external API indexing lag, and throughput limits. The bloom filter solution is a good example: I used a lower-level blockchain primitive to solve a reliability issue caused by an external provider.
+- Deliver with Speed, Clarity, and Craft: The design separated block detection, event fetching, and event routing into independent components, which made the system easier to reason about and evolve. When performance and indexing issues appeared, the fixes were precise rather than broad rewrites. That combination of modularity, concurrency, and targeted iteration is how I try to deliver fast without lowering the engineering bar.
+
 # OKTETO
 
 Situation:
@@ -165,3 +179,10 @@ infrastructure-as-code approach made onboarding new customer environments
 repeatable and auditable. The CLI and GraphQL API improvements contributed
 to a platform that served thousands of developers managing their Kubernetes
 development environments.
+
+Impact on Webflow core behaviors:
+
+- Build lasting customer trust: Okteto served enterprise customer environments, so reliability directly affected customer confidence. By building monitoring, dashboards, alerting, and actionable runbooks, I helped the team detect issues before customers had to report them. That changed the reliability posture from reactive support to proactive stewardship.
+- Win together: The observability stack gave engineers, product managers, and support stakeholders a shared view of system health. Clear dashboards and alerts made production issues easier to discuss and resolve as a team, while the CLI and GraphQL work helped developers use Kubernetes-based environments without needing to become Kubernetes experts.
+- Reinvent ourselves: Before this work, the team lacked a centralized way to understand production health across 20+ customer clusters. I helped move the organization toward infrastructure-as-code, repeatable deployments, and first-class observability. That was a shift from manually understanding each environment to operating the platform through reusable systems.
+- Deliver with Speed, Clarity, and Craft: I focused on practical, maintainable foundations: Terraform for auditable infrastructure, Helm for parameterized deployments, Prometheus for metrics, Grafana for visibility, and alerts tied to actionable runbooks. The work improved day-to-day operational speed while keeping the implementation clear enough for the team to extend.

@@ -63,6 +63,18 @@ Follow-up questions to rehearse:
 
 ---
 
+Situation: At Genlayer Labs, we wanted to use AI as much as possible, so every time something new appeared we started using it.
+Task: When Claude Code Skills appeared, we were tasked to add skills for all our common workflows in our repos.
+Action: I did my part and Darien (my boss, who was very stubborn) did his. The conflict appeared when I was reviewing the skills he created: he was using a design that he had copied from another coworker which did not reflect the real way skill were loaded by claude code. Example: He was using YAML with "trigger" sections, but skills get loaded by their markdown frontmatter metadata header. This lead to many discussions on the PRs where I tried to explain to him (based on the official documentation) about how his skills were not tailored to be used by claude code. After some time he eventually understood how skills worked and got loaded, but still was wanting to use his convention and style. We ended up using skills with a mix of the best practices, and then had some YAML custom stuff which was not necessary, but given that we now have huge context windows for LLMs, that small garbage was not impactful
+Result:
+Reflection: I think the most important part was effectively making Darien understand how skills worked. Then he was in his own right to decide how he wanted to use them. That last part was a discussion not worth having, thus it was the right call to not invest more time on the matter.
+
+- “What did the other person care about?” -> Results. He wanted to get the skills ready ASAP, and didn't care much about how they worked.
+- “How did you adapt your approach?” -> I've came to understand that my role was to inform him of how things worked, and he had the final call.
+- “What did you learn about collaboration?” -> That "human problems" are even more important than technology problems
+
+---
+
 ## Exercise 3: Reinvent Ourselves Story
 
 Prepare an answer for:

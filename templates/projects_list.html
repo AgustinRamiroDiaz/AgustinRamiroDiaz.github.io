@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+
+{{ section.content | safe }}
+
+<div id="article-list">
+    {% for page in section.pages %}
+        <article style="margin-bottom: 40px;">
+            <h3>
+                <a href="{{ page.permalink | safe }}">
+                {{ page.title }}
+                </a>
+            </h3>
+            
+            <div class="project-links" style="margin-bottom: 10px;">
+                {% if page.extra.live_url %}
+                    <a href="{{ page.extra.live_url }}" class="button" target="_blank" rel="noopener noreferrer" style="margin-right: 10px; font-size: 0.8em; text-decoration: none; padding: 2px 8px; border: 1px solid; border-radius: 4px;">Live Demo</a>
+                {% endif %}
+                {% if page.extra.source_url %}
+                    <a href="{{ page.extra.source_url }}" class="button" target="_blank" rel="noopener noreferrer" style="font-size: 0.8em; text-decoration: none; padding: 2px 8px; border: 1px solid; border-radius: 4px;">Source Code</a>
+                {% endif %}
+            </div>
+
+            {% if page.description %}
+                {{ page.description | markdown | safe }}
+            {% else %}
+                {{ page.summary | safe }}
+            {% endif %}
+
+            {% if page.extra.stack %}
+                <ul class="tags" style="margin-top: 10px;">
+                    {% for item in page.extra.stack %}
+                        <li><span class="tag" style="font-size: 0.7em;">{{ item }}</span></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </article>
+    {% endfor %}
+</div>
+{% endblock content %}

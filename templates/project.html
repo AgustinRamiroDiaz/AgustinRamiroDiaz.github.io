@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+    <div id="heading">
+        <h1>{{ page.title }}</h1>
+        
+        <div class="project-links" style="margin-bottom: 20px;">
+            {% if page.extra.live_url %}
+                <a href="{{ page.extra.live_url }}" class="button" target="_blank" rel="noopener noreferrer" style="margin-right: 10px; text-decoration: none; padding: 5px 10px; border: 1px solid; border-radius: 4px;">Live Demo</a>
+            {% endif %}
+            {% if page.extra.source_url %}
+                <a href="{{ page.extra.source_url }}" class="button" target="_blank" rel="noopener noreferrer" style="text-decoration: none; padding: 5px 10px; border: 1px solid; border-radius: 4px;">Source Code</a>
+            {% endif %}
+        </div>
+
+        {% if page.extra.stack %}
+            <ul class="tags">
+                <span class="tag">Tech Stack:</span>
+                {% for item in page.extra.stack %}
+                    <li><span class="tag">{{ item }}</span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <div id="content" style="margin-top: 20px;">
+        {{ page.content | safe }}
+    </div>
+</article>
+
+<hr />
+<nav id="post-nav">
+    <a class="post-nav-item post-nav-prev" href="{{ get_url(path='@/projects/_index.md') }}">
+        <div class="nav-arrow">Back to</div>
+        <span class="post-title">Projects</span>
+    </a>
+</nav>
+{% endblock content %}

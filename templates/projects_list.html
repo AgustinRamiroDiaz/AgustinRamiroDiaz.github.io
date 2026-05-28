@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+
+{{ section.content | safe }}
+
+<div id="article-list">
+    {% for page in section.pages %}
+        <article>
+            <a href="{{ page.permalink | safe }}"></a>
+            
+            <div class="project-links" style="float: right; position: relative; z-index: 2; display: flex; gap: 0.5rem;">
+                {% if page.extra.live_url %}
+                    <a href="{{ page.extra.live_url }}" class="badge" target="_blank" rel="noopener noreferrer">
+                        Live Demo
+                    </a>
+                {% endif %}
+                {% if page.extra.source_url %}
+                    <a href="{{ page.extra.source_url }}" class="badge" target="_blank" rel="noopener noreferrer">
+                        Source Code
+                    </a>
+                {% endif %}
+            </div>
+
+            <h3>
+                <a href="{{ page.permalink | safe }}">
+                {{ page.title }}
+                </a>
+            </h3>
+
+            {% if page.description %}
+                {{ page.description | markdown | safe }}
+            {% else %}
+                {{ page.summary | safe }}
+            {% endif %}
+
+            {% if page.extra.stack %}
+                <div class="details">
+                    <small>
+                        <ul class="tags">
+                            {% for item in page.extra.stack %}
+                                <li><a class="tag" style="pointer-events: none;">{{ item }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </small>
+                </div>
+            {% endif %}
+        </article>
+    {% endfor %}
+</div>
+{% endblock content %}

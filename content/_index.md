@@ -190,10 +190,6 @@ Contributed to Carpoolear, an open source carpooling platform that connects driv
 - [Frontend](https://github.com/STS-Rosario/carpoolear) - `VueJS`
 - [Backend](https://github.com/STS-Rosario/carpoolear_backend) - `PHP`, `Laravel`
 
-## Snake with local multiplayer
-
-With my interest in `rust` and game development, I took a shot at building a [multiplayer snake game](https://github.com/AgustinRamiroDiaz/snake_bevy) with [Bevy](https://bevyengine.org/). I learned about the [ECS](https://en.wikipedia.org/wiki/Entity_component_system) framework and data oriented Rust
-
 ## QWorld Global Quantum Programming Workshop | [QBronze](https://qworld.lu.lv/index.php/workshop-bronze/)
 
 Introductory level workshop series on the basics of quantum computing

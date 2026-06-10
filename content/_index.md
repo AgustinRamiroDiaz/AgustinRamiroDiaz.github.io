@@ -42,7 +42,7 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 Building the [GenLayer Node](https://docs.genlayer.com/validators/setup-guide) ([repo](https://github.com/genlayerlabs/genlayer-node/)), a decentralized executor for the [GenVM](https://github.com/genlayerlabs/genvm), responsible for processing GenLayer transactions.
 
 - Main coding languages: `Go`, `Solidity`, `Python`, `TypeScript`
-- Managing the infrastructure with `Ansible` + `GCP VMs` + `docker compose`
+- Managing the infrastructure (testnet + e2e environments) with `Ansible` + `GCP VMs` + `docker compose`
 - Observability with `Prometheus`, `Grafana`, `Grafana Alloy` and `Pyroscope`
 
 ### dApps builder
@@ -53,6 +53,8 @@ Building the [GenLayer Node](https://docs.genlayer.com/validators/setup-guide) (
 - [Rally](https://www.rally.fun/)
 
 ### @Developer Experience
+
+Building the developer tools around the core GenLayer network
 
 `Python`, `VueJS`, `TypeScript`, `Solidity`
 

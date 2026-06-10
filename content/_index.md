@@ -28,8 +28,8 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 - Cloud Providers: Google Cloud Platform, AWS
 - DevOps practices with GitOps and CI/CD
 - Web Development
-  - Backend: Golang, C#, Python, Rust
-  - Frontend: Angular, HTML, CSS, JavaScript, TypeScript
+  - Backend: Golang, C#, Python, Rust, TypeScript
+  - Frontend: React, NextJS, VueJS,Angular, HTML, CSS, JavaScript, TypeScript
 
 # My experience
 

@@ -15,6 +15,20 @@ try {
 
   await page.goto(url, { waitUntil: "networkidle" });
 
+  await page.evaluate(() => {
+    const selectors = [
+      'a[href="#main-content"]',
+      "#search",
+      "#theme-switcher",
+      "#feed",
+      "#search-container"
+    ];
+
+    for (const selector of selectors) {
+      document.querySelector(selector)?.remove();
+    }
+  });
+
   const pageHeightPx = await page.evaluate(() => {
     const body = document.body;
     const html = document.documentElement;

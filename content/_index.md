@@ -29,7 +29,7 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 - DevOps practices with GitOps and CI/CD
 - Web Development
   - Backend: Golang, C#, Python, Rust, TypeScript
-  - Frontend: React, NextJS, VueJS,Angular, HTML, CSS, JavaScript, TypeScript
+  - Frontend: React, NextJS, VueJS, Angular, HTML, CSS, JavaScript, TypeScript
 
 # My experience
 

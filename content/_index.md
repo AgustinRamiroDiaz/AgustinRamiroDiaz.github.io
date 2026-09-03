@@ -33,9 +33,15 @@ I've become a fan of asynchronous culture due to the flexibility and productivit
 
 # My experience
 
+## DevOps Engineer at [Particle41](https://particle41.com/)
+
+> 2026 - Present
+
+`Terraform`, `AWS`
+
 ## Engineer at [GenLayer Labs](https://www.genlayerlabs.com/) building [GenLayer](https://www.genlayer.com/)
 
-> 2024 - Present
+> 2024 - 2026
 
 ### GenLayer Node Developer
 

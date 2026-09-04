@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Agustín Ramiro Díaz - CI/CD</title>
+    <subtitle>Programmer and Acrobat</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://agustinramirodiaz.github.io/tags/ci-cd/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://agustinramirodiaz.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-02-05T00:00:00+00:00</updated>
+    <id>https://agustinramirodiaz.github.io/tags/ci-cd/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Dinamically get the URL of a GitHub Pages site in a GitHub Action</title>
+        <published>2024-02-05T00:00:00+00:00</published>
+        <updated>2024-02-05T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Agustín Ramiro Díaz
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://agustinramirodiaz.github.io/blog/gh-action-get-pages-url/"/>
+        <id>https://agustinramirodiaz.github.io/blog/gh-action-get-pages-url/</id>
+        
+        <content type="html" xml:base="https://agustinramirodiaz.github.io/blog/gh-action-get-pages-url/">&lt;h1 id=&quot;how-to-get-the-url-of-a-github-pages-site-in-a-github-action&quot;&gt;How to get the URL of a GitHub Pages site in a GitHub Action&lt;/h1&gt;
+&lt;p&gt;We can use GitHub’s CLI in order to retrieve the Github Pages site with&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; api&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;repos/&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;GITHUB_REPOSITORY&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;/pages&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-8&quot;&gt; -&lt;/span&gt;&lt;span class=&quot;z-l-8 z-d-8&quot;&gt;-jq&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; &amp;#39;&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;.html_url&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Luckily, &lt;code&gt;$GITHUB_REPOSITORY&lt;/code&gt; is a predefined environment variable in GitHub Actions, so we can use it to get the URL of the GitHub Pages site.&lt;/p&gt;
+&lt;pre class=&quot;giallo z-l-code z-d-code&quot; &gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; this script is executed on every push to main&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-7 z-d-7&quot;&gt;on&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;  p&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ush&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;    b&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ranches&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      -&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; m&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;ain&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ame&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; B&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;uild and deploy GH Pages&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;obs&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;  b&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;uild&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;    r&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;uns-on&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; u&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;buntu-latest&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;    s&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;teps&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      -&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt; n&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ame&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; c&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;heckout&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; we first checkout the code&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;        u&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ses&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; a&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;ctions/checkout@v4&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      -&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt; n&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ame&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; g&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;et url&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; then we get the url of the github pages site&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;        e&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;nv&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;          G&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;H_TOKEN&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; $&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;{{ github.token }}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;        r&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;un&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-5 z-d-5&quot;&gt;          |&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; we use the gh cli to get the url and save it in an environment variable&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;          url=$(gh api &amp;quot;repos/$GITHUB_REPOSITORY/pages&amp;quot; --jq &amp;#39;.html_url&amp;#39;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;          echo &amp;quot;url=$url&amp;quot; &amp;gt;&amp;gt; $GITHUB_ENV&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      -&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt; n&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ame&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; b&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;uild_and_deploy&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;        u&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;ses&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; s&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;halzz/zola-deploy-action@v0.18.0&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;        e&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;nv&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt;          #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; Target branch&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;          P&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;AGES_BRANCH&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; g&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;h-pages&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;          B&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;UILD_FLAGS&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; --&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;base-url ${{ env.url }}&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; we pass the url to zola&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt;          #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; Provide personal access token&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt;          #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; TOKEN: ${{ secrets.TOKEN }}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt;          #&lt;/span&gt;&lt;span class=&quot;z-l-6 z-l-i z-d-3 z-d-i&quot;&gt; Or if publishing to the same repo, use the automatic token&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;          T&lt;/span&gt;&lt;span class=&quot;z-l-1 z-d-1&quot;&gt;OKEN&lt;/span&gt;&lt;span&gt;:&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt; $&lt;/span&gt;&lt;span class=&quot;z-l-2 z-d-2&quot;&gt;{{ secrets.GITHUB_TOKEN }}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</content>
+        
+    </entry>
+</feed>

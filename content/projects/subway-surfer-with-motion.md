@@ -1,9 +1,9 @@
 +++
-title = "Subway Surfer with Motion"
-weight = 10
+title = "Webcam Motion Games"
+weight = 5
 [extra]
-source_url = "https://github.com/AgustinRamiroDiaz/subway-surfer-with-motion"
-live_url = "https://agustinramirodiaz.github.io/subway-surfer-with-motion/"
+source_url = "https://github.com/AgustinRamiroDiaz/webcam-motion-games"
+live_url = "https://agustinramirodiaz.github.io/webcam-motion-games/"
 stack = ["React", "TypeScript", "Three.js", "Transformers.js", "WebGPU"]
 +++
 

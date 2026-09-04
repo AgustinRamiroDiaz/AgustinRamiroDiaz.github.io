@@ -22,6 +22,7 @@ gh api "repos/$GITHUB_REPOSITORY/pages" --jq '.html_url'
 
 Luckily, `$GITHUB_REPOSITORY` is a predefined environment variable in GitHub Actions, so we can use it to get the URL of the GitHub Pages site.
 
+{% raw %}
 ```yml
 # this script is executed on every push to main
 on:
@@ -54,3 +55,4 @@ jobs:
           # Or if publishing to the same repo, use the automatic token
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+{% endraw %}
